@@ -1,0 +1,61 @@
+openapi: 3.0.3
+info:
+  title: Users
+  description: |-
+    Users API Spec
+  version: 1.0.0
+servers:
+  - url: http://localhost:8080
+paths:
+  /users:
+    get:
+      tags:
+        - users
+      summary: Get all users
+      description: Retrieves a list of users based on the provided filters.
+      operationId: getUsers
+      parameters:
+        - name: username
+          in: query
+          description: The username of the user.
+          required: false
+          schema:
+            type: string
+        - name: name
+          in: query
+          description: The first name of the user.
+          required: false
+          schema:
+            type: string
+        - name: surname
+          in: query
+          description: The surname of the user.
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/User'
+components:
+  schemas:
+    User:
+      type: object
+      properties:
+        id:
+          type: string
+          example: "10"
+        username:
+          type: string
+          example: "nickname"
+        name:
+          type: string
+          example: "John"
+        surname:
+          type: string
+          example: "test"
