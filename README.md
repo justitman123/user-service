@@ -10,8 +10,8 @@
 
 
 # API
-GET http://localhost:8080/swagger-ui/index.html - URL to view the API documentation.
-GET  http://localhost:8080/users?username=?&name=?&surname=? - the single API endpoint to get all users.
+- GET http://localhost:8080/swagger-ui/index.html - URL to view the API documentation.
+- GET  http://localhost:8080/users?username=?&name=?&surname=? - the single API endpoint to get all users.
 
 # Requirements
 Java 17+
