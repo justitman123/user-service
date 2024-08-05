@@ -14,6 +14,6 @@
 - GET  http://localhost:8080/users?username=?&name=?&surname=? - the single API endpoint to get all users.
 
 # Requirements
-Java 17+
-Maven 3
-Docker
+- Java 17+
+- Maven 3
+- Docker
